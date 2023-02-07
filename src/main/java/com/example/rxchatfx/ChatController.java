@@ -1,5 +1,6 @@
 package com.example.rxchatfx;
 
+import io.reactivex.rxjava3.core.Observable;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -45,16 +46,20 @@ public class ChatController {
 
     public void setSocket(Socket socket) {
         this.socket = socket;
-        thread = new Thread(() -> {
-            try {
-                while (true) {
-                    DataInputStream in = new DataInputStream(socket.getInputStream());
-                    String message = in.readUTF();
-                    retriveMessage(message);
+        Thread thread = new Thread(() -> {
+            Observable.create(emitter -> {
+                try {
+                    while (true) {
+                        DataInputStream in = new DataInputStream(socket.getInputStream());
+                        String message = in.readUTF();
+                        emitter.onNext(message);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            }).subscribe(s -> {
+                retriveMessage(s.toString());
+            });
         });
         thread.start();
     }

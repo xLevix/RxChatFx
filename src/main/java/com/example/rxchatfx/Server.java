@@ -1,5 +1,7 @@
 package com.example.rxchatfx;
 
+import io.reactivex.rxjava3.core.Observable;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.ServerSocket;
@@ -31,8 +33,7 @@ public class Server {
                 }
 
                User user = new User(nick,socket,id);
-               Thread thread = new Thread(user);
-               thread.start();
+               Observable.just(user).subscribeOn(io.reactivex.rxjava3.schedulers.Schedulers.io()).subscribe(User::run);
            }
        } catch (Exception e) {
            e.printStackTrace();

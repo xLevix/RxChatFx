@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d757b6d-cf74-44a2-ba2d-10a78f353625" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/reactive-streams-1.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/rxjava-3.1.6.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rxchatfx/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rxchatfx/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rxchatfx/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rxchatfx/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rxchatfx/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rxchatfx/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rxchatfx/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rxchatfx/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +60,12 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.rxchatfx.Client" />
       <module name="RxChatFx" />
@@ -120,6 +119,8 @@
       <workItem from="1675726097457" duration="4528000" />
       <workItem from="1675771707042" duration="3192000" />
       <workItem from="1675788917091" duration="4708000" />
+      <workItem from="1675805265663" duration="147000" />
+      <workItem from="1675813648404" duration="949000" />
     </task>
     <servers />
   </component>

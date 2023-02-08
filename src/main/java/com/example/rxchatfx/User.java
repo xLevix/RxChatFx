@@ -26,12 +26,11 @@ public class User implements Runnable{
                     String message= in.readUTF();
                     e.onNext(message);
                 } catch (IOException ex) {
-
+                    Server.connected.remove(socket);
                     for(Socket online : Server.connected){
                         DataOutputStream out = new  DataOutputStream(online.getOutputStream());
                         out.writeUTF("Uzytkownik "+nick+"#"+id+" sie rozlaczyl");
                     }
-
                     socket.close();
                     System.out.println("Uzytkownik "+nick+"#"+id+" sie rozlaczyl");
                 }

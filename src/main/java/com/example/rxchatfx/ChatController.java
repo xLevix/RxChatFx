@@ -58,21 +58,15 @@ public class ChatController {
                     e.printStackTrace();
                 }
             }).subscribe(s -> {
-                retriveMessage(s.toString());
+                String chat = messages.getText();
+                chat += "\n" + s.toString();
+                messages.setText(chat);
             });
         });
         thread.start();
     }
 
-    private void retriveMessage(String message) {
-        Platform.runLater(() -> {
-            String chat = messages.getText();
-            chat += "\n" + message;
-            messages.setText(chat);
-        });
-    }
-
-    public void kill() {
+    public void kill(Thread thread) {
         try {
             thread.interrupt();
             socket.close();

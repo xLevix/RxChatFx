@@ -40,7 +40,7 @@ public class Client extends Application {
 
     @Override
     public void stop() throws Exception{
-        chatController.kill();
+        chatController.kill(Thread.currentThread());
     }
 
 }
